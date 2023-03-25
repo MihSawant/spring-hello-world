@@ -1,21 +1,15 @@
-import config.AppConfig;
 import entities.Student;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        var ctx = new ClassPathXmlApplicationContext("oh_why.xml");
 
-        Student student = (Student) context.getBean("rodJohnson");
-        Student student2 =  (Student) context.getBean("yash");
-        Student student3 = (Student) context.getBean("mihir");
-        Student student4 = (Student) context.getBean("azi");
-        System.out.println(student);
-        System.out.println(student2);
-        System.out.println(student3);
-        System.out.println(student4);
-
+        Student me = (Student) ctx.getBean("mihir");
+        Student two = (Student) ctx.getBean("azi");
+        Student three = (Student) ctx.getBean("yash");
+        Student four = (Student) ctx.getBean("suresh");
+        System.out.printf("1: %s%n2: %s%n3: %s%n4: %s", me, two, three, four);
 
     }
 }

@@ -9,6 +9,8 @@ public class Student {
         this.rollNo = rollNo;
     }
 
+    public Student(){}
+
     public String getName() {
         return name;
     }

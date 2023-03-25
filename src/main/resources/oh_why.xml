@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mihir" class="entities.Student">
+       <property name="name" value="Mihir Sawant"/>
+        <property name="rollNo" value="48"/>
+    </bean>
+    <bean id="azi" class="entities.Student">
+        <property name="name" value="Azirel Mendes"/>
+        <property name="rollNo" value="30"/>
+    </bean>
+    <bean id="yash" class="entities.Student">
+        <property name="name" value="Yash Chowdhari"/>
+        <property name="rollNo" value="10"/>
+    </bean>
+    <bean id="suresh" class="entities.Student">
+        <property name="name" value="Suresh Chaudhary"/>
+        <property name="rollNo" value="7"/>
+    </bean>
+</beans>
