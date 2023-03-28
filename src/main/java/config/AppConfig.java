@@ -1,5 +1,6 @@
 package config;
 
+import entities.Address;
 import entities.Student;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,11 +12,18 @@ public class AppConfig {
     public Student mihirBean(){
         return new Student("Mihir", 48);
     }
+    @Bean
+    public Address mihirAddress(){
+        Address mihirAddress = new Address();
+        mihirAddress.setCity("Mumbai");
+        mihirAddress.setPinCode(400067);
+        mihirAddress.setStudent(mihirBean());
+        return mihirAddress;
+    }
 
 
-    @Bean(name = "rodJohnson")
+    @Bean(name = "suresh")
     public Student sureshBean(){
-        System.out.println("Creator of Spring :)");
         return new Student("Suresh", 7);
     }
 
