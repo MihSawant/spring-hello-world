@@ -2,6 +2,10 @@ package config;
 
 import entities.Address;
 import entities.Student;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -35,5 +39,10 @@ public class AppConfig {
     @Bean(name = "yash")
     public Student yashBean(){
         return new Student("Yash", 10);
+    }
+
+    @Bean
+    public List<Student> studentsDB(){
+        return new ArrayList<>();
     }
 }
